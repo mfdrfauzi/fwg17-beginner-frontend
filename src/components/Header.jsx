@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderBg from '../assets/img/bg-header.png'
+import BgImage from '../assets/img/bg-header.png'
 import StatCard from './StatCard'
 
 
@@ -24,15 +24,15 @@ export const HeaderContent = () => {
 
 export const HeaderImage = () => {
   return (
-    <div className="hidden md:flex md:flex-1 bg-cover bg-center" style={{ backgroundImage: `url(${HeaderBg})` }}></div>
+    <div className="hidden md:flex md:flex-1 bg-cover bg-center" style={{ backgroundImage: `url(${BgImage})` }}></div>
   )
 }
 
-const Header = ({ HeaderBg }) => {
+const Header = ({ BgImage }) => {
   return (
     <header className="h-screen flex flex-col-reverse md:flex-row">
       <HeaderContent />
-      <HeaderImage HeaderBg={HeaderBg} />
+      <HeaderImage BgImage={BgImage} />
     </header>
   )
 }

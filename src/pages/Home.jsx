@@ -11,6 +11,8 @@ import Maps from '../assets/img/maps.png'
 import RateProfileImg from '../assets/img/profile.png'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
+import HomeArticle from '../components/HomeArticle'
+import ProductHighlight from '../components/ProductHighlight'
 
 const Home = () => {
   const productImages = [Product1, Product2, Product3, Product4]
@@ -20,79 +22,9 @@ const Home = () => {
 
     <Header />
 
-    <article className="flex h-1/2">
-      <div className="flex md:flex-1 justify-center items-center bg-white px-6 py-12 md:px-0">
-        <div className="flex flex-col flex-1 md:px-20 gap-6">
-          <h1 className="text-2xl md:text-5xl relative pl-6">
-            <span className="border-l-4 md:border-l-8 border-l-amber-500 h-full md:h-1/2 absolute left-0 md:top-1/2 md:transform md:-translate-y-1/2"></span>
-            We Provide <span className="text-amber-800">Good Coffee</span> and <span className="text-amber-800">Healthy Meals</span>
-          </h1>
+    <HomeArticle />
 
-          <div className="text-sm md:text-base">
-            You can explore the menu that we provide with fun and have their own taste and make your day better.
-          </div>
-          <ul className="flex flex-col gap-6 text-sm md:text-base">
-            <li className="flex gap-2.5">
-              <FeatherIcon icon="check-circle" className="text-green-600" />
-              High quality beans
-            </li>
-            <li className="flex gap-2.5">
-              <FeatherIcon icon="check-circle" className="text-green-600" />
-              Healthy meals, you can request the ingredients
-            </li>
-            <li className="flex gap-2.5">
-              <FeatherIcon icon="check-circle" className="text-green-600" />
-              Chat with our staff to get better experience for ordering
-            </li>
-            <li className="flex gap-2.5">
-              <FeatherIcon icon="check-circle" className="text-green-600" />
-              Free member card with a minimum purchase of IDR 200.000
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="hidden md:flex md:flex-1 bg-cover bg-center" style={{ backgroundImage: `url(${ArticleBg})` }}></div>
-    </article>
-
-    <section className="flex flex-col h-screen items-center mt-20 px-10 gap-6">
-      <div className="flex flex-col items-center gap-6">
-        <h1 className="text-2xl md:text-5xl text-center">
-          Here is People’s <span className="text-amber-800">Favorite</span>
-        </h1>
-        <div className="w-8 h-1 md:w-16 md:h-1.5 bg-amber-500"></div>
-        <div className="flex w-full text-sm md:text-base text-center">
-          Let’s choose and have a bit taste of people’s favorite. It might be yours too!
-        </div>
-      </div>
-      <div className="h-full overflow-scroll md:overflow-visible bg-gray-200 md:bg-white md:px-0">
-        <div className="flex flex-col flex-1 md:flex-row mt-14 gap-5 items-center justify-center">
-          {productImages.map((image, index) => (
-            <card key={index} className="flex-1 h-auto">
-              <div className="flex justify-center rounded overflow-hidden">
-                <img src={image} alt={`Product ${index + 1}`} />
-              </div>
-              <div className="flex bg-white shadow-md mx-16 md:mx-6 p-3 -mt-8 relative">
-                <div className="flex flex-col gap-2">
-                  <h2 className="text lg md:text-2xl">Hazelnut Latte</h2>
-                  <div className="text-xs md:text-sm">
-                    You can explore the menu that we provide with fun and have their own taste and make your day better.
-                  </div>
-                  <div className="text-lg md:text-2xl text-amber-500">IDR 20.000</div>
-                  <div className="flex flex-1 gap-2">
-                    <button className="flex-1 h-9 border border-amber-500 bg-amber-500 rounded font-semibold">Buy</button>
-                    <button className="md:w-auto h-9 border border-amber-500 rounded py-px px-4">
-                      <li className="flex justify-center m-0">
-                        <FeatherIcon icon="shopping-cart" className="text-amber-500" />
-                      </li>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </card>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ProductHighlight />
 
     <div className="flex flex-col md:h-auto items-center gap-14 bg-[rgba(195, 190, 183, 0.3)] my-12 px-5">
       <div className="flex flex-col items-center gap-6 mt-11">
