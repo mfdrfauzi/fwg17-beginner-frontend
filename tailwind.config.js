@@ -5,6 +5,9 @@ export default {
     'src/**/*.{js,jsx,css}'
   ],
   theme: {
+    fontFamily: {
+      'brand' : ['Sacramento','Arial']
+    },
     extend: {},
   },
   plugins: [],
