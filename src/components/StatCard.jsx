@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 const StatCard = ({ label, max, duration }) => {
-  const [currentValue, setCurrentValue] = useState(0)
+  const [currentValue, setCurrentValue] = React.useState(0)
 
   useEffect(() => {
     if (currentValue < max) {

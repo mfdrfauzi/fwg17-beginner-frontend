@@ -10,7 +10,10 @@ export const HeaderContent = () => {
           <h1 className="text-2xl md:text-5xl">Start Your Day with Coffee and Good Meals</h1>
           <div className="text-sm md:text-base">We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</div>
           <div>
-            <button className="border border-amber-500 bg-amber-500 text-black h-12 w-36 rounded">Get Started</button>
+            <button 
+            className="border border-amber-500 bg-amber-500 text-black h-12 w-36 rounded"
+            onClick={() => (window.location.href = "/register")}
+            >Get Started</button>
           </div>
           <div className="flex justify-between divide-x">
             <StatCard label="Staff" max={90} duration={40} />

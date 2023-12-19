@@ -6,7 +6,7 @@ const SectionHeader = ({title = 'Header Title',text = 'Header Text'}) => {
              {title}
             </h1>
             <div className="w-8 h-1 md:w-16 md:h-1.5 bg-amber-500"></div>
-            <div className="flex w-full text-sm md:text-base text-center">
+            <div className="flex text-sm md:text-base text-center">
             {text}
             </div>
         </div>
