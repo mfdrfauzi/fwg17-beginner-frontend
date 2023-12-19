@@ -10,7 +10,7 @@ const OrderCard = ({ imageUrl, isFlashSale, name, quantity, size, variant, type,
     setIsHidden(true)
   }
   return (
-    <div className={`flex p-2.5 gap-7 bg-gray-100 items-center ${isHidden ? 'hidden' : ''}`}>
+    <div className={`flex p-2.5 gap-7 bg-gray-100 shadow-md items-center ${isHidden ? 'hidden' : ''}`}>
       <div>
         <img className="max-w-44 max-h-44" src={imageUrl} alt={name} />
       </div>

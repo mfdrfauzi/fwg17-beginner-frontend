@@ -16,7 +16,7 @@ const PaymentInfo = () => {
                 <EmailInput />
                 <FullNameInput />
                 <AddressInput />
-                <RadioGroup groupName="size" label="Choose Size" options={sizeOptions} />
+                <RadioGroup groupName="size" label="Delivery" options={sizeOptions} />
             </form>
         </div>
 

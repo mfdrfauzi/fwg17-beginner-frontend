@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, CartButton } from './Buttons';
 import RatingStar from './RatingStar';
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,7 +20,9 @@ const ProductCard = ({ image, title, description, price, isFlashSale, ratingProd
       </div>
       <div className="relative flex-1 bg-white shadow-md mx-16 md:mx-6 p-3 -mt-8">
         <div className="flex flex-col gap-2">
-          <h2 className="text lg md:text-2xl">{title}</h2>
+          <h2 className="text lg md:text-2xl">
+            <Link to='/detail-product'>{title}</Link>
+            </h2>
           <div className="flex-1 text-xs md:text-sm">{description}</div>
           {ratingProduct && (
             <RatingStar gap={'gap-2'} rating={ratingProduct}/>

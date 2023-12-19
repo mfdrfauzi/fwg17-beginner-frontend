@@ -64,7 +64,7 @@ const CheckoutProduct = () => {
                             + Add Menu
                         </button>
                     </div>
-                    <div className="flex flex-col h-[450px] gap-4 overflow-scroll p-3">
+                    <div className="flex flex-col h-[450px] gap-4 overflow-scroll p-3 bg-slate-50">
                         {orderData.map((order, index) => (
                             <OrderCard key={index} {...order} />
                         ))}

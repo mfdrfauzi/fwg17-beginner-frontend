@@ -11,27 +11,27 @@ const CouponList = () =>{
           title: "HAPPY MOTHER’S DAY!",
           description: "Get one of our favorite menu for free!",
           claimLink: "#",
-          bgColor: "green-400",
+          bgColor: "bg-green-400",
         },
         {
           imgSrc: Promo1,
           title: "HAPPY MOTHER’S DAY!",
           description: "Get one of our favorite menu for free!",
           claimLink: "#",
-          bgColor: "green-400",
+          bgColor: "bg-green-400",
         },
         {
           imgSrc: Promo1,
           title: "HAPPY MOTHER’S DAY!",
           description: "Get one of our favorite menu for free!",
           claimLink: "#",
-          bgColor: "green-400",
+          bgColor: "bg-green-400",
         },
         {
           imgSrc: Promo2,
           title: "Get a cup of coffee for free on sunday morning",
           description: " Only at 7 to 9 AM",
-          bgColor: "yellow-200",
+          bgColor: "bg-yellow-200",
         },
     ]
 
