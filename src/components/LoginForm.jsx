@@ -21,10 +21,11 @@ function LoginForm() {
       const {data} = await axios.post('http://localhost:8888/auth/login', form.toString())
       setIsSuccess(true)
       setIsError(false)
+      console.log(data)
 
-      setTimeout(() => {
-        window.location.href = '/'
-      }, 2000)
+      // setTimeout(() => {
+      //   window.location.href = '/'
+      // }, 2000)
     }catch(err){
       setIsError(true)
       setIsSuccess(false)

@@ -15,44 +15,45 @@ function RegisterForm() {
     const {value: email} = e.target.email
     const {value: password} = e.target.password
     const {value: confirm} = e.target.confirm
+    
+    if(!fullname || !email || !password || !confirm){
+      setIsError(true)
+      setIsSuccess(false)
+      return
+    }
+    
+    if(!email.includes('@')){
+      setIsError(true)
+      setIsSuccess(false)
+      return
+    }
+
+    if(password != confirm){
+      setIsError(true)
+      setIsSuccess(false)
+      return
+    }
+    
     const form = new URLSearchParams()
     form.append('fullName', fullName)
     form.append('email', email)
     form.append('password', password)
+    
   
-    try {
-      if (fullName && email.includes('@') && password && confirm && password === confirm) {
-        const response = await axios.post('http://localhost:8888/auth/register', form.toString())
-        setIsSuccess(true)
-        setIsError(false)
-  
-        setTimeout(() => {
-          window.location.href = '/login'
-        }, 2000)
-      }
-    } catch (err) {
+    try{
+      const {data} = await axios.post('http://localhost:8888/auth/register', form.toString())
+      setIsSuccess(true)
+      setIsError(false)
+
+      setTimeout(() => {
+        window.location.href = '/login'
+      }, 2000)
+    
+    }catch(err) {
+      console.log(err)
       setIsError(true)
       setIsSuccess(false)
     }
-
-  // const registerProcess = (e) => {
-  //   e.preventDefault()
-  //       const fullName = e.target.fullname.value
-  //       const email = e.target.email.value
-  //       const password = e.target.password.value
-  //       const confirm = e.target.confirm.value
-            
-  //   if (fullName && email.includes('@') && password && confirm && password === confirm) {
-  //     setIsSuccess(true)
-  //     setIsError(false)
-      
-  //     setTimeout(() => {
-  //       window.location.href = '/login'
-  //           }, 2000)
-  //         } else {
-  //     setIsError(true)
-  //           setIsSuccess(false)
-  //       }
   }
   
   return (

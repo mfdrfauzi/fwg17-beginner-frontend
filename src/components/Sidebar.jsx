@@ -41,11 +41,11 @@ const Sidebar = () => {
 
   return (
     <aside className="flex flex-col bg-black rounded-3xl h-fit p-8 gap-y-6">
-      <div className="flex justify-between">
-        <div>Filter</div>
-        <button type='button'>Reset Filter</button>
-      </div>
       <form className="flex flex-col gap-6" action="">
+        <div className="flex justify-between">
+          <div>Filter</div>
+          <button type='reset'>Reset Filter</button>
+        </div>
         <label className="font-bold" htmlFor="search">Search</label>
         <input className="h-16 rounded p-5 text-black text-sm" id="search" type="text" placeholder="Search here"/>
         <label className="font-bold" htmlFor="category">Category</label>

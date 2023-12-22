@@ -1,4 +1,3 @@
-import React from "react"
 import CouponList from "../components/CouponList"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
@@ -8,6 +7,8 @@ import ProductHeader from "../components/ProductHeader"
 import Sidebar from "../components/Sidebar"
 
 const Product = () => {
+    
+    
     return(
         <>
         <Navbar bgColor='bg-black' />

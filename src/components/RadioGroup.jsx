@@ -1,4 +1,3 @@
-import React from 'react'
 
 const RadioGroup = ({ groupName, label, options }) => {
   return (

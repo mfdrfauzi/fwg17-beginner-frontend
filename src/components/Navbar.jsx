@@ -3,6 +3,7 @@ import { useState } from 'react'
 import FeatherIcon from "feather-icons-react/build/FeatherIcon"
 import Brand from "./Brand"
 import { CartButton, SignButton } from "./Buttons"
+import { Link } from 'react-router-dom'
 
 const Navbar = ({bgColor,position}) => {
     const [menuOpen, setMenuOpen] = React.useState(false)
@@ -22,14 +23,14 @@ const Navbar = ({bgColor,position}) => {
             </div>
             <ul className="flex flex-col md:flex-row md:flex-1 mx-3 items-center md:items-normal justify-center md:justify-normal gap-4 md:gap-0">
                 <li className="mx-8">
-                    <a className="hover:border-b pb-2 -mt-2 hover:border-amber-500" href="/">
+                    <Link className="hover:border-b pb-2 -mt-2 hover:border-amber-500" to="/">
                     Home
-                    </a>
+                    </Link>
                 </li>
                 <li className="mx-8">
-                    <a className="hover:border-b pb-2 -mt-2 hover:border-amber-500" href="/product">
+                    <Link className="hover:border-b pb-2 -mt-2 hover:border-amber-500" to="/product">
                     Product
-                    </a>
+                    </Link>
                 </li>
             </ul>
           </div>

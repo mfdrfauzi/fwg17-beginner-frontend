@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const RatingStar = ({ rating ,gap, size }) => {
@@ -21,7 +21,7 @@ const RatingStar = ({ rating ,gap, size }) => {
   return (
     <div className={`flex ${gap} ${size} items-center`}>
       {starElements}
-      <span>{rating.toFixed(1)}</span>
+      <span>{rating}</span>
     </div>
   )
 }

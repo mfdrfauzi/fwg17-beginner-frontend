@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import RateProfileImg from '../assets/img/profile.png'
 import RatingStar from "./RatingStar"
 import CarouselPagination from "./CarouselPagination"

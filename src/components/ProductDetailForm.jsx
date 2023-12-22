@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import RatingStar from './RatingStar';
 import { Button, ButtonCount, CartButton } from './Buttons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,9 +28,9 @@ const ProductDetailForm = ( {isFlashSale, name, price, ratingProduct, isRecomend
         <h2 className="text-5xl font-medium">{name}</h2>
         <div className="flex items-center text-lg md:text-2xl text-amber-500">
           {isFlashSale ? (
-              <div><span className="text-xs font-bold text-red-500 line-through">IDR {price.toLocaleString('id')}</span>
-              Rp. {discount.toLocaleString('id')}</div>
-              ) : (`Rp. ${price.toLocaleString('id')} ,-`)
+              <div><span className="text-xs font-bold text-red-500 line-through">IDR {price}</span>
+              IDR {discount}</div>
+              ) : (`Rp. ${price} ,-`)
               }
           </div>
         <RatingStar rating={ratingProduct}/>

@@ -1,7 +1,8 @@
 import React from "react"
 import FeatherIcon from "feather-icons-react/build/FeatherIcon"
+import { Link } from "react-router-dom"
 
-export const SubmitButton = ({buttonName='Button Name', href}) =>{
+export const SubmitButton = ({buttonName='Button Name'}) =>{
     return (
       <button className="border w-full h-12 rounded-md bg-amber-500" type="submit">
       {buttonName}
@@ -26,30 +27,32 @@ export const LoginMethod = () => {
 
 export const SignButton = ({ value, href, styling }) => {
     return (
-      <input
-        type="button"
-        value={value}
-        onClick={() => (window.location.href = href)}
-        className={styling}
-      />
+      <Link to={href}>
+        <input
+          type="button"
+          value={value}
+          className={styling}
+        />
+      </Link>
     )
 }
 
 export const CartButton = ({padding, border, size}) => {
     return (
-        <button className={`${padding} ${border} ${size}`} onClick={() => (window.location.href = "/checkout-product")}>
+        <button className={`${padding} ${border} ${size}`} onClick={() => (window.location = "/checkout-product")}>
             <FeatherIcon icon="shopping-cart" className="text-amber-500" />
         </button>
     )
 }
 
-export const Button = ({type, buttonName, size, href='#'}) => {
+export const Button = ({type, buttonName, size, link='#'}) => {
   return(
-    <button className={`flex-1 ${size} py-2  border border-amber-500 bg-amber-500 rounded font-semibold text-black`}
-      onClick={() => (window.location.href = href)}
-      type={type}>
-        {buttonName}
-    </button>
+    <Link to={link} className={`flex-1 ${size} py-2 border border-amber-500 bg-amber-500 rounded font-semibold text-black text-center`}>
+      <button 
+        type={type}>
+          {buttonName}
+      </button>
+    </Link>
   )
 }
 
