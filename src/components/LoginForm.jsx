@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom'
 import Brand from './Brand'
 import { EmailInput, PasswordInput } from './InputForm'
@@ -23,9 +23,9 @@ function LoginForm() {
       setIsError(false)
       console.log(data)
 
-      // setTimeout(() => {
-      //   window.location.href = '/'
-      // }, 2000)
+      setTimeout(() => {
+        window.location.href = '/'
+      }, 2000)
     }catch(err){
       setIsError(true)
       setIsSuccess(false)
@@ -56,7 +56,7 @@ function LoginForm() {
         </div>
       <SubmitButton buttonName='Login' />
       <div className="flex items-center justify-center">
-        Not have an account? <Link to='/register' className="text-amber-500">Register</Link>
+        Not have an account?<span><Link to='/register' className="text-amber-500">Register</Link></span>
       </div>
       <div className="flex items-center justify-center">
         <div className="flex-grow border-t border-gray-300 mx-2"></div>

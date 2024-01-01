@@ -1,7 +1,7 @@
-// import React from 'react';
-import { Button, CartButton } from './Buttons';
-import RatingStar from './RatingStar';
-import { Link } from 'react-router-dom';
+// import React from 'react'
+import { Button, CartButton } from './Buttons'
+import RatingStar from './RatingStar'
+import { Link } from 'react-router-dom'
 import NoImg from '../assets/img/no-image.png'
 
 
@@ -17,10 +17,10 @@ const ProductCard = ({id, image, productName, description, price, isFlashSale, r
           Flash Sale!
         </div>
       )}
-      <div className="flex flex-1 justify-center object-cover overflow-hidden">
-        <img className='flex-1 ' src={image || defaultImage} alt={productName} />
+      <div className="flex flex-1 h-60 justify-center overflow-hidden mx-10 md:mx-0">
+        <img className='flex-1 object-cover object-center' src={image? `http://localhost:8888/uploads/products/${image}` : defaultImage} alt={productName} />
       </div>
-      <div className="relative flex-1 bg-white shadow-md mx-16 md:mx-6 p-3 -mt-8">
+      <div className="relative flex-1 bg-white shadow-md mx-14 md:mx-6 p-3 -mt-8">
         <div className="flex flex-col gap-2">
           <h2 className="text lg md:text-2xl">
             <Link to={`/detail-product/${id}`}>{productName}</Link>
@@ -31,9 +31,9 @@ const ProductCard = ({id, image, productName, description, price, isFlashSale, r
           )}
           <div className="flex items-center text-lg md:text-2xl text-amber-500">
           {isFlashSale ? (
-              <div><span className="text-xs font-bold text-red-500 line-through">IDR {price}</span>
-              IDR {discount}</div>
-              ) : (`Rp. ${price} ,-`)
+              <div><span className="text-xs font-bold text-red-500 line-through">IDR {price?.toLocaleString('id')}</span>
+              IDR {discount.toLocaleString('id')}</div>
+              ) : (`Rp. ${price?.toLocaleString('id')} ,-`)
               }
           </div>
           <div className="flex flex-1 gap-2">

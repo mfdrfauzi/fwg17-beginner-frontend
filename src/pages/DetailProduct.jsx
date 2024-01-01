@@ -1,7 +1,6 @@
 import Footer from "../components/Footer"
 import ImageProduct from "../components/ImageProduct"
 import Navbar from "../components/Navbar"
-import LargeImg from '../assets/img/prod-2.png'
 import SmallImg1 from '../assets/img/coffee-2.png'
 import SmallImg2 from '../assets/img/coffee-3.png'
 import SmallImg3 from '../assets/img/coffee-4.png'
@@ -14,25 +13,12 @@ import axios from "axios"
 
 const DetailProduct = () => {
     const productImages = {
-        large: LargeImg,
         small: [
             SmallImg1,
             SmallImg2,
             SmallImg3,
         ]
     }
-
-    // const productData = [
-    //     {
-    //       isFlashSale: true,
-    //       name: "Hazelnut Latte",
-    //       description: "Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours.",
-    //       price: 20000,
-    //       ratingProduct: 5.0,
-    //       isRecomendation: true,
-    //     }
-    // ]
-
     const {id} = useParams()
     const [product, setProduct] = useState({})
     
@@ -43,7 +29,7 @@ const DetailProduct = () => {
     }
 
     useEffect(() =>{
-        getPost()
+        getPost(id)
     },[id])
 
     // const { isFlashSale=true, name, description, price, ratingProduct, isRecomendation } = productData[0]
@@ -52,14 +38,14 @@ const DetailProduct = () => {
         <>
         <Navbar bgColor='bg-black' />
         <div className="flex mx-32 my-32 h-auto gap-5">
-            <ImageProduct images={productImages} />
+            <ImageProduct smallImages={productImages} image={product.image} />
             <ProductDetailForm
                 isFlashSale={true}
                 name={product.name}
                 desc={product.description}
                 price={product.basePrice}
                 ratingProduct={product.rating}
-                isRecomendation={true}
+                isRecommended={product.isRecommended}
             />
         </div>
         <div className="flex flex-col h-auto mx-32 gap-6">

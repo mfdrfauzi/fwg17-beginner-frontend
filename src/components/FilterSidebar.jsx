@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Button } from './Buttons'
 
 const CheckboxFilter = ({ label }) => {
@@ -23,7 +23,7 @@ const ListFilter = ({ id, items }) => {
     )
   }
 
-const Sidebar = () => {
+const FilterSidebar = () => {
   const categoryItems = [
     { label: 'Favorite Product' },
     { label: 'Coffee' },
@@ -65,4 +65,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default FilterSidebar

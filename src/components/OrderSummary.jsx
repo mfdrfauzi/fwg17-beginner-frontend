@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Image1 from '../assets/img/payment-1.png'
 import Image2 from '../assets/img/payment-2.png'
 import Image3 from '../assets/img/payment-3.png'
@@ -39,7 +39,7 @@ const OrderSummary = ({ orders }) => {
           <div className="text-gray-700">Subtotal</div>
           <div>IDR {subtotal.toLocaleString('id')}</div>
         </div>
-        <Button buttonName={'Checkout'} href='/history-order' />
+        <Button buttonName={'Checkout'} link='/history-order' />
         <div className="flex flex-col gap-5 text-gray-600 text-sm font-medium">
           <div>We accept</div>
           <div className="flex justify-between items-center h-8 w-full">

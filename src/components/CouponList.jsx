@@ -52,7 +52,7 @@ const CouponList = () =>{
     return (
         <div>
           <div className="flex justify-between items-center mx-32 py-12">
-            <div className="text-5xl">Today <span className="text-amber-800">Promo</span></div>
+            <div className="text-2xl md:text-5xl">Today <span className="text-amber-800">Promo</span></div>
             <div className="flex gap-2.5">
             <CarouselButton handlePrevClick={handlePrevClick} handleNextClick={handleNextClick} />
             </div>
